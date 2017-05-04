@@ -22,7 +22,7 @@ html {
 
 h1 {
     font-family: "Roboto Mono", monospace;
-    font-size: 37px;
+    font-size: 2rem;
     font-weight: 400;
     line-height: 1.20;
     opacity: .84;
@@ -35,7 +35,7 @@ h1 {
 
 h2 {
     font-family: "Roboto Mono", monospace;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 400;
     line-height: 1.20;
     opacity: .84;
@@ -48,7 +48,7 @@ h2 {
 
 h3 {
     font-family: "Roboto Mono", monospace;
-    font-size: 21px;
+    font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.20;
     opacity: .84;
@@ -61,7 +61,7 @@ h3 {
 
 h4 {
     font-family: "Roboto Mono", monospace;
-    font-size: 21px;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.20;
     opacity: .84;
@@ -74,7 +74,7 @@ h4 {
 
 p {
     font-family: "Roboto Mono", monospace;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.60;
     opacity: 0.84;
@@ -152,11 +152,11 @@ ul {
 }
 
 #home-hero {
-  background-image: url("images/space-view.jpg");
+  background-image: url("../images/space-view.jpg");
 }
 
 #article-hero {
-  background-image: url("images/harvest-moon.jpg");
+  background-image: url("../images/harvest-moon.jpg");
   height: 672px;
   width: 504px;
   background-position: center;
@@ -164,7 +164,7 @@ ul {
 }
 
 #about-hero {
-  background-image: url("images/astronaut-visor.jpg");
+  background-image: url("../images/astronaut-visor.jpg");
   margin-bottom: 96px;
 }
 
