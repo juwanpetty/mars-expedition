@@ -68,13 +68,16 @@ p {
   font-family: "Roboto Mono", monospace;
   font-size: 1rem;
   font-weight: 400;
-  line-height: 1.60;
+  line-height: 1.5rem;
   opacity: 0.84;
   margin-top: 0px;
   margin-bottom: 25px;
   letter-spacing: -0.30px;
   word-spacing: -0.10px;
   text-transform: none; }
+  @media screen and (max-width: 770px) {
+    p {
+      font-size: 0.875rem; } }
 
 a {
   text-decoration: none;
@@ -106,6 +109,9 @@ ul {
 /* NAVIGATION */
 #navigation {
   margin-bottom: 72px; }
+  @media screen and (max-width: 770px) {
+    #navigation {
+      margin-bottom: 2rem; } }
 
 #navigation ul {
   height: 120px;
@@ -113,9 +119,22 @@ ul {
   justify-content: flex-end;
   align-items: center;
   padding-left: 0px; }
+  @media screen and (max-width: 770px) {
+    #navigation ul {
+      justify-content: center;
+      flex-direction: column; }
+      #navigation ul #logo {
+        margin-left: initial;
+        margin-right: initial;
+        margin-bottom: 1.5rem; }
+        #navigation ul #logo a {
+          margin: 0; } }
 
 #navigation ul li a {
   margin: 0 25px 0 25px; }
+
+.right-links {
+  display: flex; }
 
 #logo {
   margin-right: auto;
@@ -130,6 +149,10 @@ ul {
   height: 432px;
   margin-bottom: 142px;
   background-size: cover; }
+  @media screen and (max-width: 770px) {
+    .hero {
+      height: 221px;
+      margin-bottom: 71px; } }
 
 #home-hero {
   background-image: url("../images/space-view.jpg"); }
@@ -140,6 +163,11 @@ ul {
   width: 504px;
   background-position: center;
   margin-bottom: 0; }
+  @media screen and (max-width: 770px) {
+    #article-hero {
+      display: block;
+      width: 100%;
+      height: 432px; } }
 
 #about-hero {
   background-image: url("../images/astronaut-visor.jpg");
@@ -149,6 +177,16 @@ ul {
 .split {
   display: flex;
   margin-bottom: 96px; }
+  @media screen and (max-width: 770px) {
+    .split {
+      flex-direction: column; } }
+
+@media screen and (max-width: 770px) {
+  div.split:last-of-type {
+    display: flex;
+    flex-direction: column; }
+    div.split:last-of-type .right {
+      order: -1; } }
 
 .split ol li {
   margin-bottom: 96px; }
@@ -161,25 +199,47 @@ ul {
 
 .split ol li p {
   margin-bottom: 48px; }
+  @media screen and (max-width: 770px) {
+    .split ol li p {
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem; } }
 
 .left, .right {
   width: 100%; }
 
 .left > h2 {
   margin-bottom: 40px; }
+  @media screen and (max-width: 770px) {
+    .left > h2 {
+      width: 80%;
+      padding-left: 2.5rem; } }
+
+@media screen and (max-width: 770px) {
+  .left > a {
+    margin-left: 2.5rem; } }
 
 .left > p {
   margin-bottom: 72px; }
+  @media screen and (max-width: 770px) {
+    .left > p {
+      margin-bottom: 2rem;
+      padding-left: 2.5rem; } }
 
 /* FOOTER */
 footer {
   height: 112px;
   position: relative;
   display: flex;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  padding-top: 1.5rem; }
+  @media screen and (max-width: 770px) {
+    footer {
+      justify-content: center; }
+      footer p {
+        width: 95%;
+        margin: 0 auto; } }
 
 footer p {
-  margin-top: 32px;
   color: rgba(255, 255, 255, 0.38); }
 
 footer a {
@@ -190,12 +250,16 @@ footer::before {
   position: absolute;
   width: 100%;
   height: 1px;
+  top: 0;
   background: rgba(255, 255, 255, 0.12); }
 
 /* HEADER */
 .header {
   margin-bottom: 96px;
   text-align: center; }
+  @media screen and (max-width: 770px) {
+    .header {
+      margin-bottom: 3rem; } }
 
 /* ABOUT */
 #about-info {
@@ -210,6 +274,18 @@ footer::before {
 h4 {
   margin-bottom: 48px;
   margin-top: 0; }
+
+#contact .right {
+  order: 2; }
+#contact .left, #contact .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+#contact .left > p {
+  margin-bottom: 2rem; }
+@media screen and (max-width: 770px) {
+  #contact .left {
+    margin-bottom: 3rem; } }
 
 /* FORM */
 label {
