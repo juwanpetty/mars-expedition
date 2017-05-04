@@ -22,7 +22,7 @@ html {
 
 h1 {
     font-family: "Roboto Mono", monospace;
-    font-size: 37px;
+    font-size: 2rem;
     font-weight: 400;
     line-height: 1.20;
     opacity: .84;
@@ -35,7 +35,7 @@ h1 {
 
 h2 {
     font-family: "Roboto Mono", monospace;
-    font-size: 28px;
+    font-size: 1.75rem;
     font-weight: 400;
     line-height: 1.20;
     opacity: .84;
@@ -48,7 +48,7 @@ h2 {
 
 h3 {
     font-family: "Roboto Mono", monospace;
-    font-size: 21px;
+    font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.20;
     opacity: .84;
@@ -61,7 +61,7 @@ h3 {
 
 h4 {
     font-family: "Roboto Mono", monospace;
-    font-size: 21px;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.20;
     opacity: .84;
@@ -74,15 +74,19 @@ h4 {
 
 p {
     font-family: "Roboto Mono", monospace;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
-    line-height: 1.60;
+    line-height: 1.5rem;
     opacity: 0.84;
     margin-top: 0px;
     margin-bottom: 25px;
     letter-spacing: -0.30px;
     word-spacing: -0.10px;
     text-transform: none;
+
+    @media screen and (max-width: 770px) {
+      font-size: 0.875rem;
+    }
 }
 
 a {
@@ -120,6 +124,10 @@ ul {
 /* NAVIGATION */
 #navigation {
   margin-bottom: 72px;
+
+  @media screen and (max-width: 770px) {
+    margin-bottom: 2rem;
+  }
 }
 
 #navigation ul {
@@ -128,10 +136,29 @@ ul {
   justify-content: flex-end;
   align-items: center;
   padding-left: 0px;
+
+  @media screen and (max-width: 770px) {
+    justify-content: center;
+    flex-direction: column;
+
+    #logo {
+      margin-left: initial;
+      margin-right: initial;
+      margin-bottom: 1.5rem;
+
+      a {margin: 0;}
+    }
+
+
+  }
 }
 
 #navigation ul li a {
   margin: 0 25px 0 25px;
+}
+
+.right-links {
+  display: flex;
 }
 
 #logo {
@@ -149,22 +176,33 @@ ul {
   height: 432px;
   margin-bottom: 142px;
   background-size: cover;
+
+  @media screen and (max-width: 770px) {
+    height: 221px;
+    margin-bottom: 71px;
+  }
 }
 
 #home-hero {
-  background-image: url("images/space-view.jpg");
+  background-image: url("../images/space-view.jpg");
 }
 
 #article-hero {
-  background-image: url("images/harvest-moon.jpg");
+  background-image: url("../images/harvest-moon.jpg");
   height: 672px;
   width: 504px;
   background-position: center;
   margin-bottom: 0;
+
+  @media screen and (max-width: 770px) {
+    display: block;
+    width: 100%;
+    height: 432px;
+  }
 }
 
 #about-hero {
-  background-image: url("images/astronaut-visor.jpg");
+  background-image: url("../images/astronaut-visor.jpg");
   margin-bottom: 96px;
 }
 
@@ -172,6 +210,21 @@ ul {
 .split {
   display: flex;
   margin-bottom: 96px;
+
+  @media screen and (max-width: 770px) {
+    flex-direction: column;
+  }
+}
+
+div.split:last-of-type {
+  @media screen and (max-width: 770px) {
+    display: flex;
+    flex-direction: column;
+
+    .right {
+      order: -1;
+    }
+  }
 }
 
 .split ol li {
@@ -188,6 +241,11 @@ ul {
 
 .split ol li p {
   margin-bottom: 48px;
+
+  @media screen and (max-width: 770px) {
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .left, .right {
@@ -196,10 +254,26 @@ ul {
 
 .left > h2 {
   margin-bottom: 40px;
+
+  @media screen and (max-width: 770px) {
+    width: 80%;
+    padding-left: 2.5rem;
+  }
+}
+
+.left > a {
+  @media screen and (max-width: 770px) {
+    margin-left: 2.5rem;
+  }
 }
 
 .left > p {
   margin-bottom: 72px;
+
+  @media screen and (max-width: 770px) {
+    margin-bottom: 2rem;
+    padding-left: 2.5rem;
+  }
 }
 
 /* FOOTER */
@@ -208,10 +282,19 @@ footer {
   position: relative;
   display: flex;
   justify-content: flex-end;
+  padding-top: 1.5rem;
+
+  @media screen and (max-width: 770px) {
+    justify-content: center;
+
+    & p {
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
 }
 
 footer p {
-  margin-top: 32px;
   color: rgba(255, 255, 255, 0.38);
 }
 
@@ -224,6 +307,7 @@ footer::before {
   position: absolute;
   width: 100%;
   height: 1px;
+  top: 0;
   background: rgba(255, 255, 255, 0.12);
 }
 
@@ -231,6 +315,10 @@ footer::before {
 .header {
   margin-bottom: 96px;
   text-align: center;
+
+  @media screen and (max-width: 770px) {
+    margin-bottom: 3rem;
+  }
 }
 
 /* ABOUT */
@@ -248,6 +336,28 @@ footer::before {
 h4 {
   margin-bottom: 48px;
   margin-top: 0;
+}
+
+#contact  {
+  .right {
+    order: 2;
+  }
+
+  .left, .right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left > p {
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (max-width: 770px) {
+    .left {
+      margin-bottom: 3rem;
+    }
+  }
 }
 
 /* FORM */
